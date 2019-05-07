@@ -1,12 +1,16 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<cstring>
 using namespace std;
 
 int lefting[50];
 
 int main(int argc, char** argv)
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     int test_case;
     int T;
     cin>>T;
@@ -65,7 +69,10 @@ int main(int argc, char** argv)
             ans++;
         }
         if(flag) cout<<"#"<<test_case<<" "<<ans<<"\n";
-        else cout<<"#"<<test_case<<" "<<-1<<"\n";
+        else {
+            cout<<"#"<<test_case<<" "<<-1<<"\n";
+            memset(lefting, 0, sizeof(lefting));
+        }
     }
     return 0;
 }
