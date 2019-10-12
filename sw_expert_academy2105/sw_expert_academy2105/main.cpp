@@ -26,10 +26,6 @@ void dfs(int y, int x, int dir, int cnt){
         if(!isExist[map[ny][nx]]){
             isExist[map[ny][nx]] = true;
             dfs(ny, nx, dir, cnt+1);
-            isExist[map[ny][nx]] = false;
-        }
-        if(!isExist[map[ny][nx]]){
-           isExist[map[ny][nx]] = true;
             dfs(ny, nx, dir+1, cnt+1);
             isExist[map[ny][nx]] = false;
         }
